@@ -1,0 +1,104 @@
+/* CSS by samantha ayala */
+
+/* Global styles (mobile first) */
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: tan;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+@media (min-width: 600px) {
+    body {
+        grid-template-columns: 1fr 1fr;
+        background-color:violet;     
+    }
+}
+@media screen and (min-width: 800px) {
+    body {
+        grid-template-columns: 1fr 1fr 1fr;
+        background-color:lightblue;     
+    }
+    
+header {
+    background-color: lightpink;
+    padding: 1.5rem;
+    text-align: center;
+}
+header h1 {
+    margin-bottom: 1rem;
+}
+
+/* navigation-flexbox */
+
+.nav-links {
+    list-style:none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.nav-links a:hover {
+    color: darkblue;
+}
+/* Main Layout -CSS Grid*/
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+/* content cards */
+.card,
+#favorites {
+        background-color: lightyellow;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    h2 {
+        color:dark darkblue;
+    }
+    ul {
+        margin-left: 20px;
+    }
+    a {
+        color: darkblue;
+        text-decoration: none;
+    }
+    footer {
+        background-color: lightgray;
+        text-align: center;
+        padding: 1rem;
+        margin-top: 20px;
+    }
+
+    /* tablet */
+    @media (min-width: 600px) {
+        main {
+            grid-template-columns: 1fr 1fr;
+            }
+        .nav-links {
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
+    /* desktop */
+    @media (min-width: 800px) {
+        main {
+            grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+
